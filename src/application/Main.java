@@ -12,7 +12,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("vista.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("splash.fxml"));
 			// BorderPane root = new BorderPane();
 			AnchorPane root = (AnchorPane) loader.load();
 			Scene scene = new Scene(root, 570, 320);

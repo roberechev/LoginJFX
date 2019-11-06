@@ -1,8 +1,18 @@
 package application;
 
 import javafx.animation.FadeTransition;
+import javafx.animation.RotateTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 public class controlador {
@@ -18,15 +28,91 @@ public class controlador {
 	@FXML
 	private Pane p4;
 
+	@FXML
+	private ImageView im;
+
+	@FXML
+	private Label lab;
+
+	@FXML
+	private AnchorPane anch;
+
 	public void initialize() {
 
 //		p1.setStyle("-fx-background-image: url('playa1.jpg')");
 //		p2.setStyle("-fx-background-image: url('playa2.jpg')");
 //		p3.setStyle("-fx-background-image: url('playa3.jpg')");
 //		p4.setStyle("-fx-background-image: url('playa4.jpg')");
+		TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(0.1), im);
+		translateTransition.setByY(1000);
+		translateTransition.play();
 
-		backgroundAnimation();
+		TranslateTransition translateTransition0 = new TranslateTransition(Duration.seconds(0.1), lab);
+		translateTransition0.setByY(1000);
+		translateTransition0.play();
 
+		translateTransition.setOnFinished(event -> {
+
+			TranslateTransition translateTransition1 = new TranslateTransition(Duration.seconds(1), im);
+			translateTransition1.setByY(-1000);
+			translateTransition1.play();
+
+			translateTransition1.setOnFinished(event1 -> {
+				RotateTransition rotateTran = new RotateTransition(Duration.seconds(1.5), im);
+				rotateTran.setByAngle(360);
+				rotateTran.setCycleCount(1);
+				rotateTran.play();
+
+				rotateTran.setOnFinished(event2 -> {
+					TranslateTransition translateTransition11 = new TranslateTransition(Duration.seconds(1), lab);
+					translateTransition11.setByY(-1000);
+					translateTransition11.play();
+
+					translateTransition11.setOnFinished(event3 -> {
+						ScaleTransition scale = new ScaleTransition(Duration.seconds(2), anch);
+						scale.setFromX(1);
+						scale.setFromY(1);
+						scale.setByX(1);
+						scale.setByY(1);
+						scale.play();
+						
+						scale.setOnFinished(event4 -> {
+							FadeTransition fadeTransition1 = new FadeTransition(Duration.seconds(2), anch);
+							fadeTransition1.setFromValue(1);
+							fadeTransition1.setToValue(0.1);
+							fadeTransition1.play();
+
+							fadeTransition1.setOnFinished(event5 -> {
+								Stage thisStage = (Stage) anch.getScene().getWindow();
+								cambio();
+								thisStage.close();
+							});
+
+						});
+					});
+				});
+
+			});
+
+		});
+
+	}
+
+	@FXML
+	private void cambio() {
+		try {
+			Stage primaryStage = new Stage();
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("vista.fxml"));
+			// BorderPane root = new BorderPane();
+			AnchorPane root = (AnchorPane) loader.load();
+			Scene scene = new Scene(root, 570, 320);
+			// scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.initStyle(StageStyle.UNDECORATED);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void backgroundAnimation() {
