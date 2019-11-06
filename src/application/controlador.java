@@ -75,7 +75,7 @@ public class controlador {
 						scale.setByX(1);
 						scale.setByY(1);
 						scale.play();
-						
+
 						scale.setOnFinished(event4 -> {
 							FadeTransition fadeTransition1 = new FadeTransition(Duration.seconds(2), anch);
 							fadeTransition1.setFromValue(1);
@@ -95,6 +95,7 @@ public class controlador {
 			});
 
 		});
+		backgroundAnimation();
 
 	}
 
