@@ -64,7 +64,7 @@
                         <Font size="10.0" />
                      </font>
                      <VBox.margin>
-                        <Insets top="7.0" />
+                        <Insets bottom="10.0" top="15.0" />
                      </VBox.margin>
                   </Label>
                </children>
