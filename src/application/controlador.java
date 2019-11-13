@@ -1,5 +1,7 @@
 package application;
 
+import com.jfoenix.controls.JFXButton;
+
 import javafx.animation.FadeTransition;
 import javafx.animation.RotateTransition;
 import javafx.animation.ScaleTransition;
@@ -36,11 +38,15 @@ public class controlador {
 
 	@FXML
 	private AnchorPane anch;
+	
+	@FXML
+	private JFXButton getStarted;
+	
+	
 
 	public void initialize() {
 		splashTransicion();
 		backgroundAnimation();
-
 	}
 
 	@FXML
@@ -99,6 +105,22 @@ public class controlador {
 		});
 	}
 
+	@FXML
+	private void cambio2() {
+		try {
+			Stage primaryStage = new Stage();
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("home.fxml"));
+			// BorderPane root = new BorderPane();
+			AnchorPane root = (AnchorPane) loader.load();
+			Scene scene = new Scene(root, 570, 320);
+			// scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			//primaryStage.initStyle(StageStyle.UNDECORATED);
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	@FXML
 	private void cambio() {
 		try {

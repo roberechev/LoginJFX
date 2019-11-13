@@ -1,27 +1,48 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
 .fondo{
-	-fx-background-image:url("playa.jpg");
+	-fx-background-image:url("../img/playa.jpg");
 	-fx-background-size:100.0%;
 	-fx-background-repeat: no-repeat;
 }
  
 
 .fondo1{
-	-fx-background-image:url("playa1.jpg");
+	-fx-background-image:url("../img/playa1.jpg");
 }
 .fondo2{
-	-fx-background-image:url("playa2.jpg");
+	-fx-background-image:url("../img/playa2.jpg");
 }
 .fondo3{
-	-fx-background-image:url("playa3.jpg");
+	-fx-background-image:url("../img/playa3.jpg");
 }
 .fondo4{
-	-fx-background-image:url("playa4.jpg");
+	-fx-background-image:url("../img/playa4.jpg");
+}
+
+.f1{
+	-fx-background-image:url("../img/b1.jpg");
+	-fx-background-size:cover;
+	-fx-background-repeat: no-repeat;
+}
+.f2{
+	-fx-background-image:url("../img/b2.jpg");
+	-fx-background-size:cover;
+	-fx-background-repeat: no-repeat;
+}
+.f3{
+	-fx-background-image:url("../img/b3.jpg");
+	-fx-background-size:100%;
+	-fx-background-repeat: no-repeat;
+}
+.f4{
+	-fx-background-image:url("../img/b4.jpg");
+	-fx-background-size:cover;
+	-fx-background-repeat: no-repeat;
 }
 
 .logo{
-	-fx-border-radius: 50px;
+	-fx-border-radius: 50.0px;
 	-fx-font-family: Tattoo Ink;
 }
 

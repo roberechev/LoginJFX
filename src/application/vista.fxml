@@ -54,7 +54,7 @@
                         <Insets left="25.0" right="25.0" top="5.0" />
                      </VBox.margin>
                   </JFXTextField>
-                  <JFXButton prefHeight="25.0" prefWidth="151.0" styleClass="boton" text="Get Started" textFill="WHITE">
+                  <JFXButton fx:id="getStarted" onAction="#cambio2" prefHeight="25.0" prefWidth="151.0" styleClass="boton" text="Get Started" textFill="WHITE">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
