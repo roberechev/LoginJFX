@@ -38,11 +38,13 @@ public class controlador {
 	private AnchorPane anch;
 
 	public void initialize() {
+		splashTransicion();
+		backgroundAnimation();
 
-//		p1.setStyle("-fx-background-image: url('playa1.jpg')");
-//		p2.setStyle("-fx-background-image: url('playa2.jpg')");
-//		p3.setStyle("-fx-background-image: url('playa3.jpg')");
-//		p4.setStyle("-fx-background-image: url('playa4.jpg')");
+	}
+
+	@FXML
+	private void splashTransicion() {
 		TranslateTransition translateTransition = new TranslateTransition(Duration.seconds(0.1), im);
 		translateTransition.setByY(1000);
 		translateTransition.play();
@@ -95,8 +97,6 @@ public class controlador {
 			});
 
 		});
-		backgroundAnimation();
-
 	}
 
 	@FXML
