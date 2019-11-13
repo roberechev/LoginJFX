@@ -36,7 +36,7 @@ public class controladorHome {
 	public void initialize() {
 		difuminado.setVisible(false);
 
-		fuera2 = new TranslateTransition(Duration.seconds(0.5), fondoBurguer);
+		fuera2 = new TranslateTransition(Duration.seconds(0.1), fondoBurguer);
 
 		fuera2.setByX(-300);
 		fuera2.play();

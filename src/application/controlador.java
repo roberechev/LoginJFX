@@ -108,13 +108,16 @@ public class controlador {
 	@FXML
 	private void cambio2() {
 		try {
+			
 			Stage primaryStage = new Stage();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("home.fxml"));
 			// BorderPane root = new BorderPane();
 			AnchorPane root = (AnchorPane) loader.load();
-			Scene scene = new Scene(root, 570, 320);
+			Scene scene = new Scene(root, 570, 550);
 			// scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
+			Stage cerrar = (Stage) p1.getScene().getWindow();
+			cerrar.close();
 			//primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.show();
 		} catch (Exception e) {
