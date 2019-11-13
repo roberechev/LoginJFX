@@ -1,7 +1,10 @@
 package application;
 
 import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
@@ -18,11 +21,39 @@ public class controladorHome {
 	@FXML
 	private Pane p4;
 
+	@FXML
+	private Pane difuminado;
+
+	@FXML
+	private AnchorPane fondoBurguer;
+
+	@FXML
+	private ImageView lineas;
+
+	TranslateTransition fuera;
+	TranslateTransition fuera2;
+
 	public void initialize() {
+		difuminado.setVisible(false);
+
+		fuera2 = new TranslateTransition(Duration.seconds(0.5), fondoBurguer);
+
+		fuera2.setByX(-300);
+		fuera2.play();
+
+		lineas.setOnMouseClicked(event -> {
+			fuera2 = new TranslateTransition(Duration.seconds(0.5), fondoBurguer);
+			fuera2.setByX(300);
+			fuera2.play();
+			difuminado.setVisible(true);
+			difuminado.setOnMouseClicked(event2 -> {
+				difuminado.setVisible(false);
+				fuera2.setByX(-300);
+				fuera2.play();
+			});
+		});
+
 		backgroundAnimation();
-	}
-	public void menuBurguer() {
-		
 	}
 
 	private void backgroundAnimation() {

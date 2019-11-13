@@ -5,6 +5,9 @@
 	-fx-background-size:100.0%;
 	-fx-background-repeat: no-repeat;
 }
+.fondoBurguer{
+	-fx-background-color: white;
+}
  
 
 .fondo1{
