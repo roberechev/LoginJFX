@@ -122,11 +122,11 @@
          <children>
             <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="PACMA" />
-                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="CIUDADANOS" />
-                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="PP" />
-                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="PSOE" />
-                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="UPN" />
+                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="Opción 1" />
+                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="Opción 2" />
+                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="Opción 3" />
+                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="Opción 4" />
+                  <JFXButton prefHeight="90.0" prefWidth="300.0" text="Opción 5" />
                </children>
             </VBox>
          </children>
