@@ -38,11 +38,9 @@ public class controlador {
 
 	@FXML
 	private AnchorPane anch;
-	
+
 	@FXML
 	private JFXButton getStarted;
-	
-	
 
 	public void initialize() {
 		splashTransicion();
@@ -108,7 +106,7 @@ public class controlador {
 	@FXML
 	private void cambio2() {
 		try {
-			
+
 			Stage primaryStage = new Stage();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("wizard.fxml"));
 			// BorderPane root = new BorderPane();
@@ -124,6 +122,7 @@ public class controlador {
 			e.printStackTrace();
 		}
 	}
+
 	@FXML
 	private void cambio() {
 		try {
