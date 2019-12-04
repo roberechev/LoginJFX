@@ -16,6 +16,7 @@ public class Main extends Application {
 			// BorderPane root = new BorderPane();
 			AnchorPane root = (AnchorPane) loader.load();
 			Scene scene = new Scene(root, 570, 320);
+			
 			// scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			// primaryStage.setResizable(false);
@@ -26,6 +27,7 @@ public class Main extends Application {
 		}
 	}
 
+	
 	public static void main(String[] args) {
 		launch(args);
 	}

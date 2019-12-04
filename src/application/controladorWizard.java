@@ -45,8 +45,6 @@ public class controladorWizard {
 			pasarWizard(0.5, p3, -600);
 			posicion++; // showSlide=2
 
-		} else {
-			cambio3();
 		}
 
 	}
@@ -64,6 +62,11 @@ public class controladorWizard {
 			posicion--; // showSlide=1
 		}
 
+	}
+
+	@FXML
+	void Salir() {
+		cambio3();
 	}
 
 	@FXML
